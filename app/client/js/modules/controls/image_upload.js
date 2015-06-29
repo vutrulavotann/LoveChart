@@ -1,0 +1,1 @@
+Common.UploadImage("#file-1", "#");

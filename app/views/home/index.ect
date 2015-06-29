@@ -1,0 +1,89 @@
+<% extend 'layouts/home_layout' %>
+
+<% block 'title-info' : %><%- @title %><% end %>
+
+<% content %>
+	<div class="tallykit_slideshow">
+                <div class="tallykit_slideshow_inner">
+                    <div class="acoc-flexslider-clear"></div>
+                    <div class="acoc-flexslider2" id="acoc-flexslider2-uid">
+                        <ul class="slides">
+							<% for photo in @photos : %>
+								<% switch photo.slide_show : %>
+									<% when 0 : %>										
+										<li>
+											<div class="tallykit_slideshow_item image-only" style="background-image: url('<%- photo.image %>');">
+												<div class="tallykit_slideshow_item_inner">
+													<div class="tk_slideshow_image_only_warp">
+														<div class="tk_slideshow_image_holder">
+															<img src="images/content-images/Ellipse-box.png" alt="Image Only" draggable="false">
+														</div>
+													</div>
+												</div>
+											</div>
+										</li>
+									<% end %> <!-- end when 0 -->
+									<% when 1 : %>
+										<li>
+											<div class="tallykit_slideshow_item caption-left tk-color" style="background-image: url('<%- photo.image %>');">
+												<div class="tallykit_slideshow_item_inner">
+													<div class="tk_slideshow_caption_left_warp">
+														<div class="tk_slideshow_content_holder">
+															<span class="tk_slideshow_subtitle"><%- photo.caption.sub_title %></span>
+															<h3 class="tk_slideshow_title"><%- photo.caption.title %></h3>
+															<div class="tk_slideshow_content">
+																<%- photo.caption.content %>
+															</div>
+															<a href="#" class="tk_slideshow_button">Read More</a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</li>
+									<% end %> <!-- end when 1 -->
+									<% when 2 : %>
+										<li>
+											<div class="tallykit_slideshow_item caption-center tk-color" style="background-image: url('<%- photo.image %>');">
+												<div class="tallykit_slideshow_item_inner">
+													<div class="tk_slideshow_caption_center_warp">
+														<div class="tk_slideshow_content_holder">
+															<span class="tk_slideshow_subtitle"><%- photo.caption.sub_title %></span>
+															<h3 class="tk_slideshow_title"><%- photo.caption.title %></h3>
+															<a href="#" class="tk_slideshow_button"><%- photo.caption.button %></a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</li>
+									<% end %> <!-- end when 2 -->
+									<% when 3 : %>
+										<li>
+											<div class="tallykit_slideshow_item video-only" style="background-image: url('<%- photo.image %>');">
+												<div class="tallykit_slideshow_item_inner">
+													<div class="tk_slideshow_video_only_warp">
+														<a class="tk-slideshow-video-popup-link" href="#tk-slideshow-video-popup-5"><i class="fa fa-play-circle-o"></i></a>
+														<div style="display:none">
+															<div id="tk-slideshow-video-popup-5" class="tk-slideshow-video-popup">
+																<div class="fluid-width-video-wrapper" style="padding-top: 56.2%;">
+																	<iframe src="<%- photo.link_video %>" allowfullscreen="" id="fitvid821466"></iframe>
+																</div>
+																<button title="Close (Esc)" type="button" class="mfp-close">×</button>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</li>
+									<% end %> <!-- end when 2 -->
+								<% end %> <!-- end switch -->
+							<% end %>
+                        </ul>
+                    </div>
+                    <div class="acoc-flexslider-clear"></div>                    
+                </div>
+            </div>
+<% end %> <!-- End block content -->
+
+<% block 'script-tag' : %>
+	<script type="text/javascript" src="/js/modules/homepage/homepage.js"></script>
+<% end %>

@@ -1,0 +1,84 @@
+{% extends '../layouts/home_layout.html' %}
+
+{% block title %}
+	{{title}}
+{% endblock %}
+
+{% block content %}
+	<div class="tallykit_slideshow">
+                <div class="tallykit_slideshow_inner">
+                    <div class="acoc-flexslider-clear"></div>
+                    <div class="acoc-flexslider2" id="acoc-flexslider2-uid">
+                        <ul class="slides">
+							{% for item in photos %}
+								{{ item.image }}
+							{% endfor %}
+                            <li>
+                                <div class="tallykit_slideshow_item image-only tk-backgroung-img1">
+                                    <div class="tallykit_slideshow_item_inner">
+                                        <div class="tk_slideshow_image_only_warp">
+                                            <div class="tk_slideshow_image_holder">
+                                                <img src="images/content-images/Ellipse-box.png" alt="Image Only" draggable="false">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="tallykit_slideshow_item caption-left tk-backgroung-img2 tk-color">
+                                    <div class="tallykit_slideshow_item_inner">
+                                        <div class="tk_slideshow_caption_left_warp">
+                                            <div class="tk_slideshow_content_holder">
+                                                <span class="tk_slideshow_subtitle">What is</span>
+                                                <h3 class="tk_slideshow_title">Your Story</h3>
+                                                <div class="tk_slideshow_content">
+                                                    With the combination of responsive design and parallax animations, this theme will provide an optimal
+                                                    viewing experience and will make your website look great on across wide range of devices and screen sizes.
+                                                </div>
+                                                <a href="#" class="tk_slideshow_button">Read More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="tallykit_slideshow_item caption-center tk-backgroung-img3 tk-color">
+                                    <div class="tallykit_slideshow_item_inner">
+                                        <div class="tk_slideshow_caption_center_warp">
+                                            <div class="tk_slideshow_content_holder">
+                                                <span class="tk_slideshow_subtitle">The perfect canvas for your</span>
+                                                <h3 class="tk_slideshow_title">Creative Ideas</h3>
+                                                <a href="#" class="tk_slideshow_button">Read More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="tallykit_slideshow_item video-only tk-backgroung-img4">
+                                    <div class="tallykit_slideshow_item_inner">
+                                        <div class="tk_slideshow_video_only_warp">
+                                            <a class="tk-slideshow-video-popup-link" href="#tk-slideshow-video-popup-5"><i class="fa fa-play-circle-o"></i></a>
+                                            <div style="display:none">
+                                                <div id="tk-slideshow-video-popup-5" class="tk-slideshow-video-popup">
+                                                    <div class="fluid-width-video-wrapper" style="padding-top: 56.2%;">
+                                                        <iframe src="https://www.youtube.com/embed/ZxL81hkk-4I?feature=oembed" allowfullscreen="" id="fitvid821466"></iframe>
+                                                    </div>
+                                                    <button title="Close (Esc)" type="button" class="mfp-close">×</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="acoc-flexslider-clear"></div>                    
+                </div>
+            </div>
+{% endblock %} <!-- End block content -->
+
+{% block script %}
+	{% parent %}
+	<script type="text/javascript" src="js/modules/homepage/homepage.js"></script>
+{% endblock %} <!-- End block script -->

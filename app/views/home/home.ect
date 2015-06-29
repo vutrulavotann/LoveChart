@@ -1,0 +1,16 @@
+<% extend 'layouts/home_layout' %>
+<% block 'title-info' : %><%- @title %><% end %>
+
+<% block 'head-tag' :%>
+	<link rel="stylesheet" href="/fileinput/css/fileinput.min.css" type="text/css"/>	
+<% end %> <!-- head-tag -->
+
+<% content %>
+	<% include 'partial/upload_image', { action: 'photo_controller!' } %>
+<% end %> <!-- End block content -->
+
+<% block 'script-tag' : %>
+	<script type="text/javascript" src="/fileinput/js/fileinput.min.js"></script>
+	<script type="text/javascript" src="/js/modules/homepage/homepage.js"></script>
+	<script type="text/javascript" src="/js/modules/controls/image_upload.js"></script>
+<% end %>

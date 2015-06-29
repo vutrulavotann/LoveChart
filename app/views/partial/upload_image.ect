@@ -1,0 +1,24 @@
+<div class="row">
+	<div class="col-md-8">
+		<form enctype="multipart/form-data" action="./photo_controller/uploadImage" method="POST">
+			<legend>Upload Image</legend>
+			<div class="control-group">
+				<input id="file-1" type="file" multiple class="file" data-overwrite-initial="false" data-min-file-count="2">
+			</div>
+			<div class="control-group">
+				<label class="control-label" for="textinput">Let's say something</label>
+				<div class="controls">
+					<input id="textinput" name="textinput" type="text" placeholder="placeholder" class="input-xlarge">
+					<p class="help-block hide">help</p>
+				</div>
+			</div>
+			<div class="control-group">
+				<label class="control-label" for="btnSaveForm"></label>
+				<div class="controls">
+					<button id="btnSaveForm" name="btnSaveForm" class="btn btn-info">Submit</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+
